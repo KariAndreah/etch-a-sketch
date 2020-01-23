@@ -1,0 +1,11 @@
+.heading{
+    text-align:center;
+    font-family:chalkboard;
+    margin-bottom:20px;
+  }
+  #container{
+    text-align:center;
+  }
+  .content{
+    border: 0.2px solid black;
+  }
