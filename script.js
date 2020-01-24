@@ -1,5 +1,5 @@
 var container = document.getElementById("container");
-var submit = document.getElementById('submit');
+var submit = document.getElementById("submit");
 function createGrid(amount) {
   container.style.display = "grid";
   container.style.gridTemplateColumns = `repeat(${amount}, 1fr)`;
@@ -14,16 +14,20 @@ function createGrid(amount) {
     content.className = "content";
     container.appendChild(content);
     submit.addEventListener("click", function() {
-        content.style.backgroundColor = "white";
+      content.style.backgroundColor = "white";
     });
-      content.addEventListener("mouseover", function() {
-        content.style.backgroundColor = "grey";
+    content.addEventListener("mouseover", function() {
+      content.style.backgroundColor = "grey";
     });
   }
 }
 function choiceAmount() {
   var x = document.getElementById("myText").value;
   console.log(Number(x));
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
   createGrid(x);
 }
+
 createGrid(16);
